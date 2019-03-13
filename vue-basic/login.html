@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册页面练习</title>
+		<!-- 通过CDN引入Vue.js -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+		<style type="text/css">
+			body {
+				background-size: 100%, 100%;
+				background-image: url(img/background.jpg);
+				background-repeat: no-repeat;
+			}
+
+			.container {
+				font-size: 20px;
+				width: 450px;
+				height: 225px;
+				margin: 0 auto;
+				margin-top: 90px;
+				border: 1px solid darkgrey;
+				border-radius: 30px;
+				font-family: 黑体;
+			}
+
+			.title {
+				font-size: 25px;
+				margin-left: 115px;
+			}
+
+			.card {
+				margin-left: 75px;
+				margin-top: 25px;
+				line-height: 20px;
+			}
+
+			.butt1:hover {
+				background-color: white;
+			}
+
+			.butt2:hover {
+				background-color: white;
+			}
+
+			.butt1 {
+				margin-left: 15px;
+				width: 125px;
+				height: 40px;
+				color: black;
+				border-radius: 30px;
+				font-size: 20px;
+				background-color: lightgoldenrodyellow;
+				border: 1px solid darkgrey;
+				outline: none;
+				font-family: 黑体;
+
+			}
+
+			.butt2 {
+				margin-left: 25px;
+				width: 125px;
+				height: 40px;
+				color: black;
+				border-radius: 30px;
+				font-size: 20px;
+				background-color: lightgoldenrodyellow;
+				border: 1px solid darkgrey;
+				outline: none;
+				font-family: 黑体;
+
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Vue-app的根容器 -->
+		<div id="app">
+			<div class="container">
+				<br><span class="title">欢迎进入登录页面</span>
+				<div class="card">
+					<span>账号:</span>
+					<input v-model="username" placeholder=""><br />
+					<span>密码:</span>
+					<input type="password" v-model="password" placeholder=""><br><br>
+					<button type="button" class="butt1" >登录</button>
+					
+					<button type="button" class="butt2" @click="register"> 注册</button>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			// 实例化一个Vue对象
+			var app = new Vue({
+				el: '#app',
+				data: {
+					username: '',
+					password: '',
+                     
+				},
+
+
+
+
+
+			});
+		</script>
+	</body>
+</html>

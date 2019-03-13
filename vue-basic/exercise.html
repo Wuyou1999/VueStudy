@@ -58,9 +58,9 @@
 				<div class="card" v-for="author in authors">
 			    <img :src="author.avatar">
 				<div class="user" >
-					<h6>&nbsp;&nbsp;&nbsp;&nbsp;{{author.name}}</h6>
-					<h6 class="num">&nbsp;&nbsp;&nbsp;&nbsp;
-					写了{{author.words}}字&nbsp;·{{author.like}}喜欢</h6>
+					<h5>&nbsp;&nbsp;&nbsp;&nbsp;{{author.name}}</h5>
+					<h5 class="num">&nbsp;&nbsp;&nbsp;&nbsp;
+					写了{{author.words}}字&nbsp;·{{author.like}}喜欢</h5>
 				</div>
 				<p class="fans" v-if="author.fans">+关注</p>
 				<p class="nofans" v-else>√已关注</p>

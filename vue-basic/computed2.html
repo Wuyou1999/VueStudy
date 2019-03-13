@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title> computed购物车练习</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- 通过CDN引入Vue.js -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<style type="text/css">
+			.container {
+				display: flex;
+				flex-direction: column;
+				font-family: 黑体;
+				width: 95%;
+				margin: 0 auto;
+			}
+
+			.title {
+				font-size: 25px;
+
+			}
+
+			.title1 {
+				font-size: 30px;
+
+			}
+
+			.item {
+				display: flex;
+				border: 1px solid darkgrey;
+				border-radius: 10px;
+				width: 90%;
+				height: 80px;
+				margin-bottom: 10px;
+				align-items: center;
+				/* 垂直方向居中 */
+				justify-content: center;
+				/* 水平方向居中 */
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+
+			.item-id {
+				flex: 1 1 10%;
+			}
+
+			.item-name {
+				flex: 1 1 15%;
+			}
+
+			.item-price {
+				flex: 1 1 20%;
+			}
+
+			.item-intro {
+				flex: 1 1 20%;
+			}
+
+			.count {
+				display: flex;
+				flex: 1 1 30%
+			}
+
+			.goods-count {
+				width: 15px;
+
+			}
+
+			.item-img img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.butt:hover {
+				background-color: lightsalmon;
+			}
+
+			.butt {
+				width: 100px;
+				height: 40px;
+				color: white;
+				border-radius: 10px;
+				font-size: 15px;
+				background-color: orangered;
+				border: 1px solid darkgrey;
+				outline: none;
+				font-family: 黑体;
+				
+			}
+
+			a {
+				color: black;
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+			.card {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Vue-app的根容器 -->
+		<div id="app">
+			<div class="container">
+				<span class="title1"><img src="img/applelogo.jpg" />Apple官方旗舰店</span><br>
+				<span class="title">商品列表</span><br>
+				<div class="item" v-for="goods in goods">
+					<div class="item-id">
+						{{goods.id}}
+					</div>
+					<div class="item-name">
+						{{goods.name}}
+					</div>
+					<div class="item-img">
+						<img :src="goods.img">
+					</div>
+					<div class="item-intro">
+						<a :href="goods.intro">详情</a>
+					</div>
+					<div class="item-price">
+						¥{{goods.price}}
+					</div>
+					<div class="count">
+						<span>购买:</span>
+						<button type="button" @click="goods.count-=1" :disabled="goods.count===0">-</button>
+						<input type="text" class="goods-count" v-model="goods.count" />
+						<button type="button" @click="goods.count+=1">+</button>
+					</div>
+				</div>
+				<hr>
+				<div class="card">
+					<h3>您所选取商品总价：￥{{totalprice}}</h3>
+					<button type="button" class="butt" @click="totalCount()">立即结算</button>
+				</div>
+				<div class="result" v-if="show">
+					您购买 {{totalCount}}件商品,需要支付总价为：{{totalprice}}元。
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el: '#app',
+				data: {
+					goods: [{
+							id: 1,
+							name: 'iPhone8',
+							price: 3999,
+							count: 1,
+							img: 'img/ipone8.jpg',
+							intro: 'https://item.jd.com/5089267.html'
+						}, {
+							id: 2,
+							name: 'iPhoneX',
+							price: 6349,
+							count: 1,
+							img: 'img/iponeX.jpg',
+							intro: 'https://item.jd.com/5089253.html'
+						},
+						{
+							id: 3,
+							name: 'iPhoneXS Max',
+							price: 8258,
+							count: 1,
+							img: 'img/iponeXS-Max.jpg',
+							intro: 'https://item.jd.com/32960766754.html?extension_id=eyJhZCI6IjE3NTUiLCJjaCI6IjIiLCJza3UiOiIzMjk2MDc2Njc1NCIsInRzIjoiMTU1MjQ1MTk5NiIsInVuaXFpZCI6IntcImNsaWNrX2lkXCI6XCJjYTJiMWJhMS1iNDBhLTQyNGYtOGQ0NC1mNjUxYWQ5NzdiYjJcIixcIm1hdGVyaWFsX2lkXCI6XCI4MTUzNTc1NDA4Nzg2NjczNjI5XCIsXCJwb3NfaWRcIjpcIjE3NTVcIixcInNpZFwiOlwiYjNjMTJlMWMtYTk3Mi00MjAxLTg4NzMtYzI0ODNjZDFiZDI3XCJ9In0=&jd_pop=ca2b1ba1-b40a-424f-8d44-f651ad977bb2&abt=0'
+						},
+						{
+							id: 4,
+							name: 'iPhoneXR',
+							price: 5288,
+							count: 1,
+							img: 'img/iponexr.jpg',
+							intro: 'https://item.jd.com/32962088967.html?extension_id=eyJhZCI6IjE3NTUiLCJjaCI6IjIiLCJza3UiOiIzMjk2MjA4ODk2NyIsInRzIjoiMTU1MjQ1MTgwOSIsInVuaXFpZCI6IntcImNsaWNrX2lkXCI6XCI0NzZlZWYwYi1lYzdmLTRiOGEtYTE0MS03MjBjMTNjZjI3YzBcIixcIm1hdGVyaWFsX2lkXCI6XCI4NTg2MzMyNzExNzgzMjA2MTk2XCIsXCJwb3NfaWRcIjpcIjE3NTVcIixcInNpZFwiOlwiYjNjMTJlMWMtYTk3Mi00MjAxLTg4NzMtYzI0ODNjZDFiZDI3XCJ9In0=&jd_pop=476eef0b-ec7f-4b8a-a141-720c13cf27c0&abt=0'
+						}
+					],
+					show: false
+				},
+				methods: {},
+				computed: {
+					totalprice: function() {
+						var totalprice = 0;
+						for (var i = 0; i < this.goods.length; i++) {
+							totalprice += this.goods[i].price * this.goods[i].count;
+						}
+						return totalprice;
+					},
+					totalCount: function() {
+						alert('恭喜您，购买成功！')
+						this.show = true;
+						var totalCount = 0;
+						var len = this.goods.length;
+						for (var i = 0; i < len; i++) {
+							totalCount += this.goods[i].count;
+						}
+						return totalCount;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

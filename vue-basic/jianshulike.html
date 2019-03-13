@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>V-on练习4-结合图标关注和取关的练习</title>
+		<!-- 通过CDN引入Vue.js -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+	</head>
+	<style type="text/css">
+		.followed{
+			color: darkgrey;
+		}
+		.link{
+			cursor: pointer;
+		}
+		.cancle-followed{
+			color: #008000;
+		}
+		.butt{
+			width:100px;
+			height:35px;
+			color: rgb(234,111,90);
+			border-radius:30px;
+			font-size:14px;
+			background-color: #FFF;
+			border: 1px solid rgb(234,111,90);
+			outline:none;
+		}
+		.butt1{
+			width:100px;
+			height:35px;
+			color: #FF0000;
+			border-radius:30px;
+			font-size:14px;
+
+			background-color: #FFF;
+			border: 1px solid rgb(234,111,90);
+			outline:none;
+		}
+	</style>
+	<body>
+		<!-- Vue-app的根容器 -->
+		<div id="app">
+			<button type="button" class="butt" v-show="followed" @click="like"><i class ="icon-heart-empty"></i>喜欢 | {{num}}</button>
+			<button type="button" class="butt1" v-show="followed === false" @click="like">	
+			
+			<i class ="icon-heart"></i>喜欢 | {{num1}}</button>
+			
+		</div>
+		<script type="text/javascript">
+			// 实例化一个Vue对象
+			var app=new Vue({
+				el:'#app',
+				data: {
+					num: 20,
+					num1:21,
+					followed:false
+				},
+				methods: {
+					like: function(){
+					  this.followed=!this.followed;
+					}
+						
+					}
+				
+			})
+		</script>
+	</body>
+</html>
