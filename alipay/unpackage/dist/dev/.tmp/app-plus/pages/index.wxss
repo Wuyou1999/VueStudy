@@ -1,0 +1,67 @@
+
+.kong1 {
+	background-color: #15619d;
+	width: 100%;
+	height: 63rpx;
+}
+.content {
+	text-align: center;
+	height: 400rpx;
+}
+.top {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	background: rgb(28, 131, 210);
+	color: #FFFFFF;
+}
+.infor {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: 150rpx;
+	width: 100%;
+	background: rgb(28, 131, 210);
+	color: #FFFFFF;
+}
+.infor image {
+	width: 150rpx;
+	height: 100%;
+}
+.username {
+	margin-top: 50rpx;
+	margin-left: 80rpx;
+}
+.mobile {
+	margin-top: 90rpx;
+	margin-left: -115rpx;
+}
+.item {
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: 100rpx;
+	padding-left: 20rpx;
+	border-bottom: 1rpx solid #eee;
+	margin-right: 20rpx;
+	margin-bottom: 10rpx;
+	background-color: #fff;
+}
+.item image {
+	height: 60rpx;
+	width: 60rpx;
+	padding-top: 10px;
+}
+.right {
+	margin-left: 20rpx;
+	margin-top: 10px;
+}
+

@@ -1,0 +1,83 @@
+
+.top {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: 80rpx;
+	background: rgb(28, 131, 210);
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.top image {
+	width: 50rpx;
+	height: 50rpx;
+}
+.item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	height: 225rpx;
+}
+.item image {
+	margin: 15rpx;
+	width: 100rpx;
+	height: 100rpx;
+}
+.kong {
+	width: 100%;
+	height: 35rpx;
+	background: #eee;
+}
+.kong1 {
+	background-color: #15619d;
+	width: 100%;
+	height: 63rpx;
+}
+.card {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	height: 150rpx;
+	border: 1px solid #eee;
+	margin-bottom: 8px;
+	/* line-height: 32px; */
+}
+.cover image {
+	padding-top: 5rpx;
+	margin-left: 25rpx;
+	width: 140rpx;
+	height: 140rpx;
+	border-radius: 8px;
+	float: left;
+}
+.it {
+	border: 1px solid #eee;
+	width: 33.3%;
+	text-align: center;
+	line-height: 40rpx;
+}
+.name-intro {
+	margin-left: 50rpx;
+}
+.intro {
+	color: #999999;
+}
+.time {
+	color: #999999;
+	margin-left: 280rpx;
+}
+.pengyou {
+	margin-left: 525rpx;
+}
+.title {
+	color: #EEEEEE;
+	margin-left: 20px;
+}
+

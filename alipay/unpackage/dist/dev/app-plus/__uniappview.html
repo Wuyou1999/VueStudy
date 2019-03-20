@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' + (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+        </script>
+        <title>View</title>
+        <style>
+            * {
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            input[type="search"i]::-webkit-search-cancel-button {
+                display: none;
+            }
+
+        </style>
+        <script>
+            var __wxConfig = {"debug":false,"appname":"alipay","entryPagePath":"pages/home.html","page":{"pages/home.html":{"window":{"navigationBarTitleText":"首页"}},"pages/wealth.html":{"window":{"navigationBarTitleText":"财富"}},"pages/friends/friends.html":{"window":{"navigationBarTitleText":"朋友"}},"pages/index.html":{"window":{}}},"global":{"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"uni-app","navigationBarBackgroundColor":"#F8F8F8","backgroundColor":"#F8F8F8","navigationStyle":"custom"}},"tabBar":{"color":"#000000","selectedColor":"#2F85FC","backgroundColor":"#FFFFFF","borderStyle":"black","list":[{"pagePath":"pages/home.html","iconPath":"static/zhifb.png","selectedIconPath":"static/zhifb-active.png","text":"主页"},{"pagePath":"pages/wealth.html","iconPath":"static/wealth.png","selectedIconPath":"static/wealth-active.png","text":"财富"},{"pagePath":"pages/friends/friends.html","iconPath":"static/img/pengyou_1.png","selectedIconPath":"static/img/pengyou_2.png","text":"朋友"},{"pagePath":"pages/index.html","iconPath":"static/wode.png","selectedIconPath":"static/wode_1.png","text":"我的"}],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/home","pages/wealth","pages/friends/friends","pages/index"],"subPackages":[],"usingComponents":{},"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false}}
+
+        </script>
+        <script>
+            var __id__ = '';
+            window.__dispatchGenerateFunc__ = function(page) {
+                __id__ = page;
+                document.title = page;
+                // window.history.pushState('', '', page);
+                plus.webview.currentWebview().setJsFile('_www/' + page.replace('.html', '.js'));
+            };
+
+        </script>
+        <script src="__uniappes6.js"></script>
+        <script src="uniapp://ready"></script>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+
+</html>
