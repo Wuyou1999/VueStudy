@@ -10,17 +10,17 @@
 			<view class="item1  it">
 				<image src="../../static/img/shenghuohao.jpg" mode=""></image><br />
 				<text>生活号</text><br />
-				<text>简单生活</text>
+				<text class="tx">简单生活</text>
 			</view>
 			<view class="item2 it">
 				<image src="../../static/img/xiaochengxu.jpg" mode=""></image><br />
 				<text>小程序</text><br />
-				<text>发现更多服务</text>
+				<text class="tx">发现更多服务</text>
 			</view>
 			<view class="item3 it">
 				<image src="../../static/img/shenghuoquan.jpg" mode=""></image><br />
 				<text>生活圈</text><br />
-				<text>朋友分享生活</text>
+				<text class="tx">朋友分享生活</text>
 			</view>
 		</view>
 		<view class="kong"></view>
@@ -135,8 +135,7 @@
 		width: 100%;
 		height: 150upx;
 		border: 1px solid #eee;
-		margin-bottom: 8px;
-		/* line-height: 32px; */
+		line-height: 32px;
 	}
 
 
@@ -167,14 +166,20 @@
 	.time {
 		color: #999999;
 		margin-left: 280upx;
+		font-size: 15px;
 	}
 
 	.pengyou {
-		margin-left: 525upx;
+		margin-left: 515upx;
 	}
 
 	.title {
 		color: #EEEEEE;
 		margin-left: 20px;
+	}
+
+	.tx {
+		color: #999999;
+		font-size: 15px;
 	}
 </style>

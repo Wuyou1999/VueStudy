@@ -46,8 +46,7 @@
 	width: 100%;
 	height: 150rpx;
 	border: 1px solid #eee;
-	margin-bottom: 8px;
-	/* line-height: 32px; */
+	line-height: 32px;
 }
 .cover image {
 	padding-top: 5rpx;
@@ -71,13 +70,18 @@
 }
 .time {
 	color: #999999;
-	margin-left: 280rpx;
+	margin-left:280rpx;
+	font-size: 15px;
 }
 .pengyou {
-	margin-left: 525rpx;
+	margin-left: 515rpx;
 }
 .title {
 	color: #EEEEEE;
 	margin-left: 20px;
+}
+.tx {
+	color: #999999;
+	font-size: 15px;
 }
 
