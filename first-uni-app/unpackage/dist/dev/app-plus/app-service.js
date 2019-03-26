@@ -1267,7 +1267,7 @@ return root;
 
 
 
-__wxAppCode__['app.json']={"pages":["pages/index/index","pages/ucenter/ucenter","pages/ucenter/setting"],"subPackages":[],"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"uni-app","navigationBarBackgroundColor":"#F8F8F8","backgroundColor":"#F8F8F8"},"usingComponents":{},"tabBar":{"color":"#000000","selectedColor":"#2F85FC","backgroundColor":"#FFFFFF","borderStyle":"black","list":[{"pagePath":"pages/index/index","iconPath":"static/home.png","selectedIconPath":"static/home-active.png","text":"主页"},{"pagePath":"pages/ucenter/ucenter","iconPath":"static/center.png","selectedIconPath":"static/center-active.png","text":"我的"}]},"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"first-uni-app"};
+__wxAppCode__['app.json']={"pages":["pages/index/index","pages/ucenter/ucenter","pages/ucenter/setting"],"subPackages":[],"window":{"navigationBarTextStyle":"white","navigationBarBackgroundColor":"#2F85FC","backgroundColor":"#FFFFFF"},"usingComponents":{},"tabBar":{"color":"#000000","selectedColor":"#2F85FC","backgroundColor":"#FFFFFF","borderStyle":"black","list":[{"pagePath":"pages/index/index","iconPath":"static/home.png","selectedIconPath":"static/home-active.png","text":"主页"},{"pagePath":"pages/ucenter/ucenter","iconPath":"static/center.png","selectedIconPath":"static/center-active.png","text":"我的"}]},"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"first-uni-app"};
 __wxAppCode__['app.wxml']=$gwx('./app.wxml');
 
 
@@ -1588,7 +1588,7 @@ define('pages/index/index.js',function(require, module, exports, window, documen
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _default =\n\n\n\n\n\n\n\n\n\n{\n  data: function data() {\n    return {\n      title: 'Hello' };\n\n  },\n  onLoad: function onLoad() {\n\n  },\n  methods: {} };exports.default = _default;\n\n//# sourceURL=uni-app:///pages/index/index.vue?vue&type=script&lang=js&?e10a");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _default =\n\n\n\n\n\n\n{\n  data: function data() {\n    return {\n      title: 'Hello' };\n\n  },\n  onLoad: function onLoad() {},\n  methods: {} };exports.default = _default;\n\n//# sourceURL=uni-app:///pages/index/index.vue?vue&type=script&lang=js&?e10a");
 
 /***/ }),
 
@@ -1611,7 +1611,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=E:/VueStudy/first
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"view\", { staticClass: \"content\" }, [\n    _c(\"image\", {\n      staticClass: \"logo\",\n      attrs: { src: \"../../static/logo.png\" }\n    }),\n    _c(\"view\", [\n      _c(\"text\", { staticClass: \"title\" }, [_vm._v(_vm._s(_vm.title))])\n    ])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=E:/VueStudy/first-uni-app/pages/index/index.vue?vue&type=template&id=d2d0419c&");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"view\", { staticClass: \"container \" }, [\n    _c(\"text\", { staticClass: \"title\" }, [_vm._v(\"主页,\" + _vm._s(_vm.title))])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=E:/VueStudy/first-uni-app/pages/index/index.vue?vue&type=template&id=d2d0419c&");
 
 /***/ }),
 
@@ -1691,7 +1691,7 @@ define('pages/ucenter/ucenter.js',function(require, module, exports, window, doc
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _default =\n\n\n\n\n\n\n\n\n\n\n\n{\n  data: function data() {\n    return {\n      name: '吴佑' };\n\n  },\n  onLoad: function onLoad() {\n\n  },\n  methods: {} };exports.default = _default;\n\n//# sourceURL=uni-app:///pages/ucenter/ucenter.vue?vue&type=script&lang=js&?d07a");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _default =\n\n\n\n\n\n\n\n\n\n{\n  data: function data() {\n    return {\n      name: '忆曦雪' };\n\n  },\n  onLoad: function onLoad() {},\n  methods: {} };exports.default = _default;\n\n//# sourceURL=uni-app:///pages/ucenter/ucenter.vue?vue&type=script&lang=js&?d07a");
 
 /***/ }),
 
@@ -1714,7 +1714,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=E:/VueStudy/first
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"view\", { staticClass: \"content\" }, [\n    _c(\n      \"view\",\n      [\n        _c(\"text\", { staticClass: \"title\" }, [_vm._v(_vm._s(_vm.name))]),\n        _c(\n          \"navigator\",\n          { attrs: { url: \"setting\", \"hover-class\": \"navigator-hover\" } },\n          [_c(\"button\", { attrs: { type: \"primary\" } }, [_vm._v(\"个人设置\")])],\n          1\n        )\n      ],\n      1\n    )\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=E:/VueStudy/first-uni-app/pages/ucenter/ucenter.vue?vue&type=template&id=5599c062&");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"view\",\n    { staticClass: \"container\" },\n    [\n      _c(\"text\", [_vm._v(_vm._s(_vm.name) + \"的个人中心\")]),\n      _c(\n        \"navigator\",\n        {\n          attrs: { url: \"../ucenter/setting\", \"hover-class\": \"navigator-hover\" }\n        },\n        [_c(\"button\", { attrs: { type: \"default\" } }, [_vm._v(\"设置\")])],\n        1\n      )\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=E:/VueStudy/first-uni-app/pages/ucenter/ucenter.vue?vue&type=template&id=5599c062&");
 
 /***/ }),
 

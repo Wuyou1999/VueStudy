@@ -6,10 +6,9 @@
   ],
   "subPackages": [],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#2F85FC",
+    "backgroundColor": "#FFFFFF"
   },
   "usingComponents": {},
   "tabBar": {

@@ -1,7 +1,12 @@
 <template>
 	<!-- 根容器 -->
 	<div class="container">
-		<router-link to="/new_course"><button class="btn">新建班课</button></router-link>
+
+		<router-link to="/new_course"><img src="../assets/jiahao.png" class="btn" /></router-link>
+		<div class="box">
+			<input type="text" placeholder="搜索" class="input-box" />
+			<button type="button" class="search-btn">搜索</button>
+		</div>
 		<div class="top">
 			<p>进行中的班课</p>
 			<p>{{courses.length}}个进行中的班课</p>
@@ -15,11 +20,12 @@
 					</router-link>
 				</div>
 				<div class="course-class">
-					<p class="title">{{ course.courseClass }}</p>
+					<span class="title">{{ course.courseClass }}</span>
 				</div>
 				<div class="course-name">
-					<p class="title">{{ course.courseName }}</p>
+					<span class="title1">{{ course.courseName }}</span>
 				</div>
+				<br />
 				<div class="teacher">
 					<div class="left">
 						<div class="avatar">
@@ -28,14 +34,15 @@
 							</router-link>
 						</div>
 						<div class="username">
-							<p class="code">{{course.username}}</p>
+							<p class="code" v-if="loginUserId === course.userId">{{course.username}}</p>
+							<p class="code1" v-else="">{{course.username}}</p>
 						</div>
 					</div>
 					<div class="course-code">
 						<p class="code" v-if="loginUserId === course.userId">{{course.courseCode}}</p>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 
@@ -52,12 +59,12 @@
 					</router-link>
 				</div>
 				<div class="course-class">
-					<p class="title">{{ course.courseClass }}</p>
+					<span class="title">{{ course.courseClass }}</span>
 				</div>
 				<div class="course-name">
-					<p class="title">{{ course.courseName }}</p>
+					<span class="title">{{ course.courseName }}</span>
 				</div>
-				
+				<br />
 				<div class="teacher">
 					<div class="left">
 						<div class="avatar">
@@ -70,11 +77,10 @@
 						</div>
 					</div>
 					<div class="course-code" v-if="loginUserId === course.userId">
-						<p class="code" >{{course.courseCode}}</p>
-					    <button @click="deleteCourse(course.courseId,index)" class="btn">删除</button>
+						<p class="code">{{course.courseCode}}</p>
 					</div>
 				</div>
-				 
+
 			</div>
 		</div>
 	</div>
@@ -91,16 +97,7 @@
 			};
 		},
 		methods: {
-			deleteCourse: function(courseId, index) {
-				var _this = this;
-				this.$http({
-					method: 'delete',
-					url: 'http://localhost:8080/api/course/' + courseId
-				}).then(function() {
-					alert('班课删除成功');
-					_this.courses1.splice(index, 1);
-				});
-			}
+
 		},
 		created() {
 			var _this = this;
@@ -114,8 +111,34 @@
 	};
 </script>
 <style scoped>
+	.box {
+		margin-left: 325px;
+		align-items: center;
+		height: 35px;
+		margin-top: 1px;
+		margin-bottom: 12px;
+	}
+
+	.input-box {
+		width: 310px;
+		height: 25px;
+		border-radius: 5px;
+		border: #00BBDD 1px solid;
+
+	}
+
+	.search-btn {
+		height: 29px;
+		width: 50px;
+		background-color: #00BBDD;
+		color: white;
+		border-radius: 5px;
+		border: none;
+		outline: none;
+	}
+
 	.top {
-		width: 80%;
+		width: 100%;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
@@ -136,8 +159,8 @@
 	}
 
 	.course {
-		width: 260px;
-		height: 420px;
+		width: 220px;
+		height: 340px;
 		margin-right: 20px;
 		margin-bottom: 30px;
 		background-color: #fff;
@@ -147,8 +170,8 @@
 	}
 
 	.course1 {
-		width: 260px;
-		height: 470px;
+		width: 220px;
+		height: 340px;
 		margin-right: 20px;
 		margin-bottom: 30px;
 		background-color: #fff;
@@ -160,7 +183,8 @@
 
 	.course-cover img {
 		width: 100%;
-		height: 280px;
+		height: 240px;
+		margin-bottom: 10px;
 	}
 
 	.title {
@@ -168,39 +192,44 @@
 		color: #333;
 	}
 
+	.title1 {
+		color: darkgrey;
+	}
+
 	.btn {
-		width: 120px;
-		height: 40px;
-		border: 1px solid #fff;
-		background-color: rgb(0, 187, 221);
-		border-radius: 20px;
-		outline: none;
-		color: #fff;
-		font-size: 16px;
+		width: 50px;
+		height: 50px;
 	}
 
 	.course-code {
 		color: rgb(0, 187, 221);
 	}
+
 	.teacher {
 		display: flex;
 		justify-content: space-between;
 		padding-left: 10px;
 	}
+
 	.left {
 		display: flex;
 	}
+
 	.avatar img {
 		width: 30px;
 		height: 30px;
 		border-radius: 50%;
 		margin-right: 5px;
 	}
+
 	.code {
 		color: #00BBDD;
 		margin-top: 5px;
 	}
-	.btn:hover{
-		background-color: rgb(162, 228, 177);
+
+	.code1 {
+		margin-top: 5px;
 	}
+
+
 </style>
